@@ -1,10 +1,8 @@
 import React , { useState , useEffect } from 'react'
-import env from "react-dotenv";
 
-import { oneSnapshot , query , collection , orderBy, onSnapshot, addDoc , doc , setDoc , deleteDoc } from 'firebase/firestore'
+import {   collection ,  onSnapshot, addDoc , doc , setDoc , deleteDoc } from 'firebase/firestore'
 import { db } from './firebase.js'
 import './App.css';
-import { async } from '@firebase/util';
 
 const App = () => {
 
@@ -30,7 +28,6 @@ const App = () => {
 
   useEffect(() => {
     getData()
-    console.log(env.HOLA)
   }, [])
 
   const manejarClick = async() => {
